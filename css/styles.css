@@ -1,0 +1,147 @@
+/* Custom Garde Brand Colors & CSS Tokens */
+:root {
+  --radius: 0.75rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  
+  --background: oklch(0.201 0.038 265.5);
+  --foreground: oklch(0.985 0.003 247.9);
+  --card: oklch(0.263 0.035 262);
+  --card-foreground: oklch(0.985 0.003 247.9);
+  --popover: oklch(0.263 0.035 262);
+  --popover-foreground: oklch(0.985 0.003 247.9);
+  --primary: oklch(0.627 0.166 149.2);
+  --primary-foreground: oklch(0.145 0.03 265);
+  --secondary: oklch(0.295 0.033 262);
+  --secondary-foreground: oklch(0.985 0.003 247.9);
+  --muted: oklch(0.295 0.033 262);
+  --muted-foreground: oklch(0.72 0.032 257);
+  --accent: oklch(0.52 0.14 150);
+  --accent-foreground: oklch(0.985 0.003 247.9);
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.985 0.003 247.9);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.627 0.166 149.2);
+  
+  --surface: oklch(0.985 0.004 247.9);
+  --surface-foreground: oklch(0.201 0.038 265.5);
+  
+  --shadow-glow: 0 0 0 1px oklch(0.62 0.17 149 / 0.28), 0 24px 60px -24px oklch(0.62 0.17 149 / 0.45);
+  --shadow-panel: 0 32px 80px -32px oklch(0.1 0.04 265 / 0.9);
+}
+
+/* Base Styles override */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom CSS Utilities */
+.section-light {
+  background-color: var(--surface) !important;
+  color: var(--surface-foreground) !important;
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    oklch(0.985 0.003 247.9) 15%,
+    oklch(0.72 0.17 150) 85%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.grid-backdrop {
+  background-image:
+    radial-gradient(60% 55% at 70% 0%, oklch(0.627 0.166 149.2 / 0.2), transparent 70%),
+    linear-gradient(oklch(1 0 0 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.045) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    56px 56px,
+    56px 56px;
+}
+
+.card-panel {
+  background: linear-gradient(160deg, oklch(1 0 0 / 0.06), oklch(1 0 0 / 0.015));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom Shadow classes */
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+.shadow-panel {
+  box-shadow: var(--shadow-panel);
+}
+
+/* Custom border overrides for tables */
+table * {
+  border-color: var(--border);
+}
+
+/* Animations */
+@keyframes garde-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-ring {
+  animation: garde-pulse 3.5s ease-in-out infinite;
+}
+
+/* GSAP hidden state class */
+.reveal-el {
+  opacity: 0;
+  transform: translateY(35px);
+  will-change: transform, opacity;
+}
+
+/* Custom details accordion container compatibility overrides */
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+}
+
+/* Scrolled Header state styling */
+.header-scrolled {
+  background-color: rgba(18, 24, 38, 0.85) !important;
+  background-color: oklch(0.201 0.038 265.5 / 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* GSAP timeline line styling */
+#timeline-progress {
+  transform-origin: top;
+  transform: scaleY(0);
+}

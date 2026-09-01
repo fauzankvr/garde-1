@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garde Email Security | Advanced Email Threat Protection</title>
+  <meta name="description" content="Garde Email Security stops phishing, spam, malware, BEC, and spoofing with multi-layer detection, SPF/DKIM/DMARC authentication, machine learning, and reputation analysis.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Garde Email Security | Advanced Email Threat Protection">
+  <meta property="og:description" content="Garde Email Security stops phishing, spam, malware, BEC, and spoofing with multi-layer detection, SPF/DKIM/DMARC authentication, machine learning, and reputation analysis.">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Garde Email Security | Advanced Email Threat Protection">
+  <meta name="twitter:description" content="Garde Email Security stops phishing, spam, malware, BEC, and spoofing with multi-layer detection, SPF/DKIM/DMARC authentication, machine learning, and reputation analysis.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            primary: 'oklch(0.627 0.166 149.2)',
+            'primary-foreground': 'oklch(0.145 0.03 265)',
+            background: 'oklch(0.201 0.038 265.5)',
+            foreground: 'oklch(0.985 0.003 247.9)',
+            card: 'oklch(0.263 0.035 262)',
+            'card-foreground': 'oklch(0.985 0.003 247.9)',
+            popover: 'oklch(0.263 0.035 262)',
+            'popover-foreground': 'oklch(0.985 0.003 247.9)',
+            secondary: 'oklch(0.295 0.033 262)',
+            'secondary-foreground': 'oklch(0.985 0.003 247.9)',
+            muted: 'oklch(0.295 0.033 262)',
+            'muted-foreground': 'oklch(0.72 0.032 257)',
+            accent: 'oklch(0.52 0.14 150)',
+            'accent-foreground': 'oklch(0.985 0.003 247.9)',
+            destructive: 'oklch(0.62 0.22 25)',
+            'destructive-foreground': 'oklch(0.985 0.003 247.9)',
+            border: 'oklch(1 0 0 / 10%)',
+            input: 'oklch(1 0 0 / 14%)',
+            ring: 'oklch(0.627 0.166 149.2)',
+            surface: 'oklch(0.985 0.004 247.9)',
+            'surface-foreground': 'oklch(0.201 0.038 265.5)',
+          },
+          boxShadow: {
+            glow: '0 0 0 1px oklch(0.62 0.17 149 / 0.28), 0 24px 60px -24px oklch(0.62 0.17 149 / 0.45)',
+            panel: '0 32px 80px -32px oklch(0.1 0.04 265 / 0.9)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-background text-foreground antialiased font-sans">
+
+  <!-- Header -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300 bg-transparent">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="grid size-9 place-items-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
+          <i data-lucide="shield-check" class="size-5" aria-hidden="true"></i>
+        </span>
+        <span class="font-display text-lg font-bold tracking-tight">
+          Garde<span class="text-primary"> Email Security</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main" class="hidden items-center gap-7 lg:flex">
+        <a href="#features" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Features</a>
+        <a href="#technologies" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Technologies</a>
+        <a href="#dashboard" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Dashboard</a>
+        <a href="#how-it-works" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">How it works</a>
+        <a href="#faq" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden items-center gap-3 lg:flex">
+        <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+          Contact Sales
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+          Request Demo
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-label="Toggle navigation menu"
+        class="grid size-10 place-items-center rounded-lg border border-border lg:hidden cursor-pointer"
+      >
+        <i data-lucide="menu" class="size-5" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden border-t border-border bg-background/95 px-5 py-4 backdrop-blur-xl lg:hidden">
+      <nav aria-label="Mobile" class="flex flex-col gap-1">
+        <a href="#features" class="mobile-nav-link rounded-md px-2 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">Features</a>
+        <a href="#technologies" class="mobile-nav-link rounded-md px-2 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">Technologies</a>
+        <a href="#dashboard" class="mobile-nav-link rounded-md px-2 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">Dashboard</a>
+        <a href="#how-it-works" class="mobile-nav-link rounded-md px-2 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">How it works</a>
+        <a href="#faq" class="mobile-nav-link rounded-md px-2 py-2.5 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground">FAQ</a>
+      </nav>
+      <a href="#contact" class="mobile-nav-link inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 mt-3 w-full h-9">
+        Request Demo
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="grid-backdrop relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
+        <!-- Hero Text -->
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-primary uppercase">
+            <i data-lucide="shield-check" class="size-3.5" aria-hidden="true"></i>
+            Advanced Email Protection Against Modern Threats
+          </span>
+          <h1 class="mt-6 text-4xl leading-[1.08] font-bold sm:text-5xl lg:text-6xl">
+            Stop <span class="text-gradient">Phishing, Malware &amp; Spam</span> Before They Reach Your Inbox
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Protect your organization with advanced email security powered by intelligent threat detection, sender authentication, machine learning, and real-time reputation analysis.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-8">
+              Request Demo
+              <i data-lucide="arrow-right" class="size-4" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8">
+              Contact Sales
+            </a>
+          </div>
+          <!-- Hero Stats -->
+          <dl class="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-6">
+            <div>
+              <dt class="font-display text-2xl font-bold text-primary">99.9%</dt>
+              <dd class="mt-1 text-xs text-muted-foreground">Detection rate</dd>
+            </div>
+            <div>
+              <dt class="font-display text-2xl font-bold text-primary">4.2B+</dt>
+              <dd class="mt-1 text-xs text-muted-foreground">Messages scanned</dd>
+            </div>
+            <div>
+              <dt class="font-display text-2xl font-bold text-primary">&lt;40ms</dt>
+              <dd class="mt-1 text-xs text-muted-foreground">Scan latency</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="relative">
+          <div class="pulse-ring absolute -inset-8 -z-10 rounded-full bg-primary/20 blur-3xl" aria-hidden="true"></div>
+          <img
+            src="assets/hero-dashboard.jpg"
+            alt="Garde Email Security dashboard showing blocked threats, phishing detection and email security analytics"
+            width="1536"
+            height="1024"
+            class="w-full rounded-2xl border border-border shadow-panel"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-light py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Key features</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Every layer of email defense, in one platform</h2>
+          <p class="mt-4 text-base text-slate-600">
+            Garde inspects authentication, reputation, content, and payloads on every message so threats never reach a mailbox.
+          </p>
+        </div>
+
+        <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature Card 1 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="layers" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Multi-Layer Email Protection</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Combine reputation analysis, sender authentication, content inspection, and machine learning to stop advanced email threats before delivery.</p>
+            </article>
+          </li>
+          <!-- Feature Card 2 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="shield-alert" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Anti-Phishing Protection</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Detect phishing attempts, spoofed domains, impersonation attacks, and malicious URLs using advanced threat intelligence and behavioral analysis.</p>
+            </article>
+          </li>
+          <!-- Feature Card 3 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="mail" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Spam Filtering</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Intelligent spam detection using statistical analysis, pattern recognition, and adaptive filtering to reduce unwanted email.</p>
+            </article>
+          </li>
+          <!-- Feature Card 4 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="bug" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Malware & Attachment Scanning</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Scan attachments and email content for malware, ransomware, viruses, and suspicious payloads before they reach users.</p>
+            </article>
+          </li>
+          <!-- Feature Card 5 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="key-round" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Sender Authentication</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">SPF validation, DKIM verification, DMARC enforcement, and ARC validation on every inbound message.</p>
+            </article>
+          </li>
+          <!-- Feature Card 6 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="gauge" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Reputation-Based Filtering</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Score sender, IP, domain, and URL reputation continuously to weight verdicts with real-world signal.</p>
+            </article>
+          </li>
+          <!-- Feature Card 7 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="sparkles" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">AI-Powered Threat Detection</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Machine learning and behavioral analysis identify new phishing campaigns, fraud attempts, and emerging threats.</p>
+            </article>
+          </li>
+          <!-- Feature Card 8 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="radar" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Real-Time Threat Intelligence</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Continuously updated threat feeds and security intelligence databases deliver proactive protection.</p>
+            </article>
+          </li>
+          <!-- Feature Card 9 -->
+          <li class="reveal-el">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="sliders-horizontal" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Policy Enforcement</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Rate limiting, greylisting, custom security policies, allow lists, and block lists under one control plane.</p>
+            </article>
+          </li>
+          <!-- Feature Card 10 -->
+          <li class="reveal-el sm:col-span-2 lg:col-span-1">
+            <article class="group h-full rounded-xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow">
+              <span class="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary">
+                <i data-lucide="scan-search" class="size-5.5" aria-hidden="true"></i>
+              </span>
+              <h3 class="mt-5 text-lg font-semibold">Email Content Analysis</h3>
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600">Inspect headers, MIME structure, URLs, attachments, HTML content, and embedded links for hidden intent.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Choose Garde Section -->
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Why choose Garde</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Measurable protection, minimal operational cost</h2>
+        </div>
+
+        <!-- Stats Panels -->
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Stat 1 -->
+          <div class="reveal-el card-panel h-full p-6">
+            <p class="font-display text-3xl font-bold text-primary">99.9%</p>
+            <h3 class="mt-3 text-sm font-semibold">Threat Detection Rate</h3>
+            <p class="mt-1.5 text-xs text-muted-foreground">Validated across enterprise mail flow</p>
+          </div>
+          <!-- Stat 2 -->
+          <div class="reveal-el card-panel h-full p-6">
+            <p class="font-display text-3xl font-bold text-primary">&lt;40ms</p>
+            <h3 class="mt-3 text-sm font-semibold">Real-Time Email Protection</h3>
+            <p class="mt-1.5 text-xs text-muted-foreground">Median inline scan latency</p>
+          </div>
+          <!-- Stat 3 -->
+          <div class="reveal-el card-panel h-full p-6">
+            <p class="font-display text-3xl font-bold text-primary">SOC 2</p>
+            <h3 class="mt-3 text-sm font-semibold">Enterprise-Grade Security</h3>
+            <p class="mt-1.5 text-xs text-muted-foreground">Hardened, audited infrastructure</p>
+          </div>
+          <!-- Stat 4 -->
+          <div class="reveal-el card-panel h-full p-6">
+            <p class="font-display text-3xl font-bold text-primary">1 day</p>
+            <h3 class="mt-3 text-sm font-semibold">Easy Deployment & Management</h3>
+            <p class="mt-1.5 text-xs text-muted-foreground">MX or inline gateway rollout</p>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="reveal-el mt-12">
+          <div class="card-panel overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[38rem] text-left text-sm">
+                <caption class="sr-only">Comparison of Garde Email Security and traditional email filtering</caption>
+                <thead>
+                  <tr class="border-b border-border">
+                    <th scope="col" class="px-6 py-4 font-semibold">Capability</th>
+                    <th scope="col" class="px-6 py-4 font-semibold text-primary">Garde</th>
+                    <th scope="col" class="px-6 py-4 font-semibold text-muted-foreground">Traditional filtering</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Multi-layer scoring engine</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">SPF, DKIM, DMARC and ARC enforcement</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Machine-learning phishing detection</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Sender, IP, domain and URL reputation</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Attachment and archive malware scanning</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-muted-foreground" aria-label="Included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Adaptive per-tenant policy engine</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="border-b border-border/60">
+                    <th scope="row" class="px-6 py-4 font-normal">Real-time threat intelligence feeds</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                  <tr class="last:border-0">
+                    <th scope="row" class="px-6 py-4 font-normal">Central visibility and audit reporting</th>
+                    <td class="px-6 py-4"><i data-lucide="check-circle-2" class="size-5 text-primary" aria-label="Included"></i></td>
+                    <td class="px-6 py-4"><i data-lucide="x-circle" class="size-5 text-destructive/80" aria-label="Not included"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="border-y border-border bg-secondary/30 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Security technologies</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Standards-based engines working together</h2>
+        </div>
+
+        <ul class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <!-- Tech 1 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="key-round" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">SPF Authentication</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Verify sending IPs against published policy.</p>
+            </div>
+          </li>
+          <!-- Tech 2 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="fingerprint" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">DKIM Signing & Validation</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Cryptographic message integrity checks.</p>
+            </div>
+          </li>
+          <!-- Tech 3 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="badge-check" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">DMARC Enforcement</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Alignment policy with reject and quarantine.</p>
+            </div>
+          </li>
+          <!-- Tech 4 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="link-2" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">ARC Support</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Preserve authentication across forwarders.</p>
+            </div>
+          </li>
+          <!-- Tech 5 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="sparkles" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">Machine Learning Detection</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Neural scoring of message features.</p>
+            </div>
+          </li>
+          <!-- Tech 6 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="gauge" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">Reputation Scoring</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Weighted signal from historic behaviour.</p>
+            </div>
+          </li>
+          <!-- Tech 7 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="globe-2" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">URL Protection</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Rewrite, expand, and detonate links.</p>
+            </div>
+          </li>
+          <!-- Tech 8 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="bug" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">Malware Scanning</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Signature plus heuristic payload analysis.</p>
+            </div>
+          </li>
+          <!-- Tech 9 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="shield-alert" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">Phishing Detection</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Impersonation and lookalike domain checks.</p>
+            </div>
+          </li>
+          <!-- Tech 10 -->
+          <li class="reveal-el">
+            <div class="card-panel h-full p-5 transition-transform duration-300 hover:-translate-y-1">
+              <i data-lucide="radar" class="size-5 text-primary" aria-hidden="true"></i>
+              <h3 class="mt-4 text-sm font-semibold">Threat Intelligence</h3>
+              <p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">Streaming indicators of active campaigns.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section id="dashboard" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Product dashboard</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Full visibility into every blocked threat</h2>
+        </div>
+
+        <div class="reveal-el mt-12">
+          <div class="card-panel p-5 sm:p-7">
+            <!-- Grid of metrics -->
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="rounded-lg border border-border bg-card p-4">
+                <p class="text-xs text-muted-foreground">Threats Blocked</p>
+                <p class="font-display mt-2 text-2xl font-bold">2,541</p>
+                <p class="mt-1 text-xs text-primary">+12.5% vs last 7 days</p>
+              </div>
+              <div class="rounded-lg border border-border bg-card p-4">
+                <p class="text-xs text-muted-foreground">Spam Detected</p>
+                <p class="font-display mt-2 text-2xl font-bold">6,921</p>
+                <p class="mt-1 text-xs text-primary">+9.1% vs last 7 days</p>
+              </div>
+              <div class="rounded-lg border border-border bg-card p-4">
+                <p class="text-xs text-muted-foreground">Phishing Blocked</p>
+                <p class="font-display mt-2 text-2xl font-bold">1,832</p>
+                <p class="mt-1 text-xs text-primary">+18.3% vs last 7 days</p>
+              </div>
+              <div class="rounded-lg border border-border bg-card p-4">
+                <p class="text-xs text-muted-foreground">Malware Found</p>
+                <p class="font-display mt-2 text-2xl font-bold">308</p>
+                <p class="mt-1 text-xs text-primary">+7.8% vs last 7 days</p>
+              </div>
+            </div>
+
+            <!-- Graph and Alerts -->
+            <div class="mt-5 grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+              <!-- Traffic graph -->
+              <div class="rounded-lg border border-border bg-card p-5">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-sm font-semibold">Email Traffic Overview</h3>
+                  <span class="text-xs text-muted-foreground">Last 12 hours</span>
+                </div>
+                <!-- Dynamic traffic bars (animated with GSAP) -->
+                <div class="mt-6 flex h-40 items-end gap-2" id="traffic-bars" aria-hidden="true">
+                  <div style="height: 0%" data-height="42" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="58" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="51" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="73" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="64" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="88" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="70" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="95" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="79" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="61" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="84" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                  <div style="height: 0%" data-height="92" class="flex-1 rounded-t bg-gradient-to-t from-primary/25 to-primary transition-all duration-500"></div>
+                </div>
+                <p class="mt-4 text-xs text-muted-foreground">
+                  Delivered 41,208 · Quarantined 2,344 · Rejected 1,197
+                </p>
+              </div>
+
+              <!-- Alerts -->
+              <div class="rounded-lg border border-border bg-card p-5">
+                <h3 class="text-sm font-semibold">Security Alerts</h3>
+                <ul class="mt-4 space-y-3">
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 size-2 shrink-0 rounded-full bg-destructive" aria-hidden="true"></span>
+                    <div>
+                      <p class="text-xs leading-relaxed">Credential phishing campaign targeting finance@</p>
+                      <p class="mt-0.5 text-[11px] text-muted-foreground">High · 2m ago</p>
+                    </div>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 size-2 shrink-0 rounded-full bg-destructive" aria-hidden="true"></span>
+                    <div>
+                      <p class="text-xs leading-relaxed">Malware attachment blocked — invoice-0421.exe</p>
+                      <p class="mt-0.5 text-[11px] text-muted-foreground">High · 15m ago</p>
+                    </div>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 size-2 shrink-0 rounded-full bg-primary" aria-hidden="true"></span>
+                    <div>
+                      <p class="text-xs leading-relaxed">Suspicious URL detonated — secure-update.co</p>
+                      <p class="mt-0.5 text-[11px] text-muted-foreground">Medium · 32m ago</p>
+                    </div>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 size-2 shrink-0 rounded-full bg-muted-foreground" aria-hidden="true"></span>
+                    <div>
+                      <p class="text-xs leading-relaxed">DMARC failure quarantined — partner domain</p>
+                      <p class="mt-0.5 text-[11px] text-muted-foreground">Low · 1h ago</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-light py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">How it works</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Seven checks between the internet and your inbox</h2>
+        </div>
+
+        <ol class="relative mt-12 space-y-6 pl-8">
+          <!-- Timeline Line Background -->
+          <div class="absolute left-0 top-0 bottom-0 w-[2px] bg-slate-200" aria-hidden="true"></div>
+          <!-- Timeline Progress Fill -->
+          <div class="absolute left-0 top-0 w-[2px] bg-primary h-full" id="timeline-progress" aria-hidden="true"></div>
+          <!-- Step 1 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">1</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Incoming Email Received</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Messages arrive at the Garde MX or inline gateway.</p>
+            </div>
+          </li>
+          <!-- Step 2 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">2</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Authentication Checks</h3>
+              <p class="mt-1.5 text-sm text-slate-600">SPF, DKIM, DMARC, and ARC results are resolved and aligned.</p>
+            </div>
+          </li>
+          <!-- Step 3 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">3</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Content & Reputation Analysis</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Headers, MIME parts, and sender reputation are scored.</p>
+            </div>
+          </li>
+          <!-- Step 4 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">4</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">AI Threat Detection</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Machine-learning models flag phishing and fraud patterns.</p>
+            </div>
+          </li>
+          <!-- Step 5 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">5</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Malware & URL Scanning</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Attachments and links are scanned and detonated as needed.</p>
+            </div>
+          </li>
+          <!-- Step 6 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">6</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Threat Classification & Action</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Verdicts map to policy: tag, quarantine, or reject.</p>
+            </div>
+          </li>
+          <!-- Step 7 -->
+          <li class="reveal-el relative">
+            <span class="absolute -left-[3.05rem] grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">7</span>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">
+              <h3 class="text-base font-semibold">Secure Delivery or Block</h3>
+              <p class="mt-1.5 text-sm text-slate-600">Clean mail is delivered; threats are blocked and logged.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Benefits</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Value across the organization</h2>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          <!-- Benefit 1 -->
+          <div class="reveal-el card-panel h-full p-7">
+            <i data-lucide="sliders-horizontal" class="size-6 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-5 text-lg font-semibold">For IT Teams</h3>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Reduced security workload</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Better visibility</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Centralized management</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Benefit 2 -->
+          <div class="reveal-el card-panel h-full p-7">
+            <i data-lucide="shield-check" class="size-6 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-5 text-lg font-semibold">For Organizations</h3>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Reduced phishing risk</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Improved compliance</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Enhanced security posture</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Benefit 3 -->
+          <div class="reveal-el card-panel h-full p-7">
+            <i data-lucide="users" class="size-6 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-5 text-lg font-semibold">For End Users</h3>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Cleaner inboxes</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Safer email experience</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-sm">
+                <i data-lucide="check-circle-2" class="mt-0.5 size-4 shrink-0 text-primary" aria-hidden="true"></i>
+                <span class="text-muted-foreground">Fewer security incidents</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="border-y border-border bg-secondary/30 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal-el max-w-2xl">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">Customer stories</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Trusted by security teams worldwide</h2>
+        </div>
+
+        <ul class="mt-12 grid gap-5 lg:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <li class="reveal-el">
+            <figure class="card-panel h-full p-7">
+              <i data-lucide="quote" class="size-6 text-primary" aria-hidden="true"></i>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted-foreground">
+                "Phishing that reached our staff dropped by over 90% in the first quarter. Impersonation attempts against our finance team are now blocked before delivery."
+              </blockquote>
+              <figcaption class="mt-6 border-t border-border pt-4">
+                <p class="text-sm font-semibold">Amara Osei</p>
+                <p class="text-xs text-muted-foreground">CISO, Northline Financial</p>
+              </figcaption>
+            </figure>
+          </li>
+          <!-- Testimonial 2 -->
+          <li class="reveal-el">
+            <figure class="card-panel h-full p-7">
+              <i data-lucide="quote" class="size-6 text-primary" aria-hidden="true"></i>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted-foreground">
+                "Authentication enforcement and reputation scoring finally gave us one consistent verdict across 14 mail domains. Our email security posture is measurable now."
+              </blockquote>
+              <figcaption class="mt-6 border-t border-border pt-4">
+                <p class="text-sm font-semibold">Daniel Reyes</p>
+                <p class="text-xs text-muted-foreground">Director of IT Security, Verdek Manufacturing</p>
+              </figcaption>
+            </figure>
+          </li>
+          <!-- Testimonial 3 -->
+          <li class="reveal-el">
+            <figure class="card-panel h-full p-7">
+              <i data-lucide="quote" class="size-6 text-primary" aria-hidden="true"></i>
+              <blockquote class="mt-4 text-sm leading-relaxed text-muted-foreground">
+                "Deployment took an afternoon. We changed MX records, imported policies, and had full threat reporting the same day with no user disruption."
+              </blockquote>
+              <figcaption class="mt-6 border-t border-border pt-4">
+                <p class="text-sm font-semibold">Sophie Lindqvist</p>
+                <p class="text-xs text-muted-foreground">Head of Infrastructure, Aurora Health Group</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div class="reveal-el">
+          <p class="text-xs font-semibold tracking-widest text-primary uppercase">FAQ</p>
+          <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Frequently asked questions</h2>
+          <p class="mt-4 text-sm text-muted-foreground">
+            Still have questions about deployment, policy migration, or compliance? Our security engineers are happy to walk through your mail flow.
+          </p>
+        </div>
+
+        <!-- GSAP Accordion -->
+        <div class="reveal-el">
+          <div class="accordion-container w-full divide-y divide-border">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>What threats does Garde Email Security protect against?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Garde blocks phishing, spam, malware and ransomware attachments, business email compromise, domain spoofing, impersonation, malicious URLs, and bulk unwanted mail.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>Does Garde support SPF, DKIM, and DMARC?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Yes. Garde validates SPF, verifies DKIM signatures, enforces DMARC alignment policies, and supports ARC so authentication survives legitimate forwarding.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>Can Garde detect phishing emails?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Yes. Phishing detection combines threat intelligence, lookalike-domain analysis, URL inspection, and machine-learning behavioural models to catch new campaigns.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>Does it scan attachments for malware?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Every attachment and archive is unpacked and scanned with signature and heuristic engines before the message is allowed to reach a mailbox.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>Is it suitable for enterprises?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Garde is built for multi-domain enterprise mail flow with per-tenant policies, role-based administration, audit logging, and horizontal scaling.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-trigger flex w-full items-center justify-between text-left text-sm font-semibold py-2 cursor-pointer focus:outline-none hover:underline">
+                <span>How quickly can it be deployed?</span>
+                <i data-lucide="chevron-down" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"></i>
+              </button>
+              <div class="accordion-content">
+                <p class="pb-4 pt-2 text-sm leading-relaxed text-muted-foreground">
+                  Most organizations are protected within a day using an MX change or inline gateway mode, with policies imported from existing filtering rules.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="grid-backdrop border-t border-border py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:px-8">
+        <div class="reveal-el">
+          <h2 class="text-3xl font-bold sm:text-4xl">Ready to Secure Your Email Infrastructure?</h2>
+          <p class="mt-4 max-w-lg text-base text-muted-foreground">
+            See Garde inspect live mail flow in a guided demo, or talk with our team about enterprise rollout, policy migration, and compliance requirements.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact-form" class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-8">
+              Schedule a Demo
+              <i data-lucide="zap" class="size-4" aria-hidden="true"></i>
+            </a>
+            <a href="#contact-form" class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-8">
+              Contact Sales
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal-el">
+          <form id="contact-form" class="card-panel space-y-4 p-7">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Name</label>
+                <input id="name" name="name" required="" autocomplete="name" class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm">
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Work email</label>
+                <input id="email" name="email" type="email" required="" autocomplete="email" class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label for="company" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Company</label>
+              <input id="company" name="company" required="" autocomplete="organization" class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm">
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Message</label>
+              <textarea id="message" name="message" rows="4" required="" class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm"></textarea>
+            </div>
+            <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors bg-primary text-primary-foreground shadow hover:bg-primary/90 cursor-pointer h-10 px-8 w-full">
+              Request Demo
+            </button>
+            <p id="form-feedback" aria-live="polite" class="min-h-5 text-xs text-primary mt-2"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-border bg-background">
+    <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[1.4fr_repeat(5,1fr)]">
+        <!-- Logo Column -->
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="grid size-9 place-items-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/30">
+              <i data-lucide="shield-check" class="size-5" aria-hidden="true"></i>
+            </span>
+            <span class="font-display text-base font-bold">Garde Email Security</span>
+          </div>
+          <p class="mt-4 max-w-xs text-sm text-muted-foreground">
+            Multi-layer email protection combining authentication, reputation analysis, machine learning, and malware scanning.
+          </p>
+          <ul class="mt-5 space-y-2 text-sm text-muted-foreground">
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="size-4 text-primary" aria-hidden="true"></i>
+              sales@garde-security.com
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="size-4 text-primary" aria-hidden="true"></i>
+              +1 (555) 018-4420
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="size-4 text-primary" aria-hidden="true"></i>
+              Boston, MA · Remote-first
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer Columns -->
+        <nav aria-label="Product">
+          <h3 class="text-sm font-semibold">Product</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Overview</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Threat Detection</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Sender Authentication</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Reporting</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Features">
+          <h3 class="text-sm font-semibold">Features</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Anti-Phishing</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Spam Filtering</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Malware Scanning</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Policy Enforcement</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Solutions">
+          <h3 class="text-sm font-semibold">Solutions</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Enterprise</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Managed Providers</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Education</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Government</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h3 class="text-sm font-semibold">Resources</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Documentation</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Deployment Guide</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Threat Reports</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Support</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h3 class="text-sm font-semibold">Company</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">About</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Careers</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Partners</a></li>
+            <li><a href="#features" class="text-sm text-muted-foreground transition-colors hover:text-primary">Security</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-12 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-xs text-muted-foreground">
+          Copyright © <span id="year">2026</span> Garde Email Security. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-xs text-muted-foreground">
+          <a href="#contact" class="hover:text-primary">Privacy Policy</a>
+          <a href="#contact" class="hover:text-primary">Terms of Service</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
