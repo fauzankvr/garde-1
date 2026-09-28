@@ -118,10 +118,8 @@ table * {
   animation: garde-pulse 3.5s ease-in-out infinite;
 }
 
-/* GSAP hidden state class */
+/* GSAP scroll reveal base */
 .reveal-el {
-  opacity: 0;
-  transform: translateY(35px);
   will-change: transform, opacity;
 }
 
@@ -144,4 +142,24 @@ table * {
 #timeline-progress {
   transform-origin: top;
   transform: scaleY(0);
+}
+
+/* AI Terminal / Signal Radar scanning effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.scanner-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, oklch(0.627 0.166 149.2 / 0.8), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
 }
